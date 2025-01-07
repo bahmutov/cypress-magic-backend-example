@@ -1,19 +1,28 @@
 {
-  "name": "cypress-example-vue-vuex-rest",
+  "name": "cypress-magic-backend-example",
   "version": "1.0.0",
-  "description": "Testing Vue + Vuex + REST TodoMVC using Cypress",
+  "description": "Example project using cypress-magic-backend plugin",
+  "private": true,
   "scripts": {
+    "test": "cypress run",
     "start": "json-server --static . --watch data.json --middlewares ./slow --middlewares ./node_modules/json-server-reset",
     "start:static": "serve -p 3000 .",
     "reset": "node reset-db.js",
     "reset:db": "npm run reset",
-    "reset:database": "npm run reset"
+    "reset:database": "npm run reset",
+    "dev": "start-test start http://localhost:3000 cy:open",
+    "cy:open": "cypress open",
+    "record": "CYPRESS_magic_backend_mode=record start-test http://localhost:3000",
+    "play": "CYPRESS_magic_backend_mode=playback start-test http://localhost:3000",
+    "test:no-backend": "CYPRESS_magic_backend_mode=playback start-test start:static http://localhost:3000"
   },
   "dependencies": {
     "json-server": "0.17.4",
     "json-server-reset": "1.6.4"
   },
   "devDependencies": {
+    "cypress": "^13.17.0",
+    "prettier": "^3.4.2",
     "serve": "^14.2.4"
   }
 }

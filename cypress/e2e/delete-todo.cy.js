@@ -1,10 +1,7 @@
 /// <reference types="cypress" />
 
 it('adds a todo', () => {
-  const mode = Cypress.env('magic_backend_mode')
-  if (mode !== 'playback') {
-    cy.request('POST', '/reset', { todos: [] })
-  }
+  cy.request('POST', '/reset', { todos: [] })
 
   cy.visit('/')
   cy.log('**confirm the items are loaded**')

@@ -1,14 +1,10 @@
 # cypress-magic-backend-example
 
-> Example project using cypress-magic-backend plugin
+> Example project using [cypress-magic-backend](https://github.com/bahmutov/cypress-magic-backend) plugin
 
-## Script commands
+## Use
 
-- `npm install` to install dependencies (or `npm ci` for modern installs)
-- `npm run reset:db` resets [data.json](data.json) to have empty list of todos
+- `npm install`
+- `npm run dev`
 
-Once NPM dependencies are installed, the application should work locally without WiFi.
-
-## Delay
-
-You can delay the initial loading by adding to the URL `/?delay=<ms>`. This is useful to simulate application bootstrapping.
+Try different backend modes: record, replay, inspect

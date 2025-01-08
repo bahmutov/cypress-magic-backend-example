@@ -5,7 +5,7 @@ module.exports = defineConfig({
     // https://github.com/bahmutov/cypress-magic-backend
     magicBackend: {
       // this app makes "XHR" calls to load and update "/todos"
-      apiCallsToIntercept: { method: '*', resourceType: 'xhr' },
+      apiCallsToIntercept: { method: '*', pathname: '/todos' },
     },
   },
   e2e: {

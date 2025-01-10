@@ -1,31 +1,32 @@
 {
   "name": "cypress-magic-backend",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "testName": "deletes a todo item",
   "apiCallsInThisTest": [
     {
       "method": "GET",
-      "url": "http://localhost:3000/todos",
+      "url": "/todos",
       "request": "",
       "response": [
         {
           "title": "item 1",
           "completed": false,
-          "id": "6854791649"
+          "id": "4225153794"
         },
         {
           "title": "item 2",
           "completed": false,
-          "id": "1827683159"
+          "id": "4278813554"
         }
       ],
-      "duration": 1013
+      "duration": 1019
     },
     {
       "method": "DELETE",
-      "url": "http://localhost:3000/todos/1827683159",
+      "url": "/todos/4278813554",
       "request": "",
       "response": {},
-      "duration": 1015
+      "duration": 1025
     }
   ]
 }

@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  defaultBrowser: 'electron',
   env: {
     // https://github.com/bahmutov/cypress-magic-backend
     magicBackend: {

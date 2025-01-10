@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-it('adds a todo', () => {
+it('adds 2 todo items', () => {
   const mode = Cypress.env('magic_backend_mode')
   if (mode !== 'playback') {
     mode && cy.log(`during the test the mode is "${mode}"`)
@@ -19,7 +19,7 @@ it('adds a todo', () => {
   cy.get('li.todo').should('have.length', 2)
 })
 
-it('deletes a todo', () => {
+it('deletes a todo item', () => {
   // we want to continue testing from the previous test
   cy.visit('/')
   cy.get('li.todo').should('have.length', 2)

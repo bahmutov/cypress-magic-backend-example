@@ -15,14 +15,14 @@
       "request": {
         "title": "item 1",
         "completed": false,
-        "id": "3018236599"
+        "id": "6854791649"
       },
       "response": {
         "title": "item 1",
         "completed": false,
-        "id": "3018236599"
+        "id": "6854791649"
       },
-      "duration": 1010
+      "duration": 1011
     },
     {
       "method": "POST",
@@ -30,14 +30,14 @@
       "request": {
         "title": "item 2",
         "completed": false,
-        "id": "5997029543"
+        "id": "1827683159"
       },
       "response": {
         "title": "item 2",
         "completed": false,
-        "id": "5997029543"
+        "id": "1827683159"
       },
-      "duration": 1009
+      "duration": 1007
     },
     {
       "method": "GET",
@@ -47,15 +47,15 @@
         {
           "title": "item 1",
           "completed": false,
-          "id": "3018236599"
+          "id": "6854791649"
         },
         {
           "title": "item 2",
           "completed": false,
-          "id": "5997029543"
+          "id": "1827683159"
         }
       ],
-      "duration": 1009
+      "duration": 1010
     }
   ]
 }

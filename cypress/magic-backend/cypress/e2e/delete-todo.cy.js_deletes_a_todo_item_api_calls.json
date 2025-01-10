@@ -10,22 +10,22 @@
         {
           "title": "item 1",
           "completed": false,
-          "id": "3018236599"
+          "id": "6854791649"
         },
         {
           "title": "item 2",
           "completed": false,
-          "id": "5997029543"
+          "id": "1827683159"
         }
       ],
-      "duration": 1017
+      "duration": 1013
     },
     {
       "method": "DELETE",
-      "url": "http://localhost:3000/todos/5997029543",
+      "url": "http://localhost:3000/todos/1827683159",
       "request": "",
       "response": {},
-      "duration": 1012
+      "duration": 1015
     }
   ]
 }

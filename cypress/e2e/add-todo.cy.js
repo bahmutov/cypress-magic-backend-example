@@ -1,7 +1,10 @@
 /// <reference types="cypress" />
 
 beforeEach(() => {
-  cy.request('POST', '/reset', { todos: [] })
+  const mode = Cypress.env('magic_backend_mode')
+  if (mode && mode !== 'playback') {
+    cy.request('POST', '/reset', { todos: [] })
+  }
 })
 
 it('adds a todo', () => {

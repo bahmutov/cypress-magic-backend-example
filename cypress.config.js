@@ -10,10 +10,16 @@ module.exports = defineConfig({
       // GET /todos
       // POST /todos
       // DELETE /todos/1234
-      apiCallsToIntercept: {
-        method: '*',
-        pathname: '/todos{/*,}',
-      },
+      apiCallsToIntercept: [
+        {
+          method: '+(GET|POST)',
+          pathname: '/todos',
+        },
+        {
+          method: 'DELETE',
+          pathname: '/todos/*',
+        },
+      ],
     },
   },
   e2e: {

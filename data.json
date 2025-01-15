@@ -2,8 +2,8 @@
   "todos": [
     {
       "title": "item 1",
-      "completed": false,
-      "id": "6313429784"
+      "id": 1,
+      "completed": false
     }
   ]
 }

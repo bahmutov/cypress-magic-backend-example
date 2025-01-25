@@ -21,14 +21,18 @@ module.exports = defineConfig({
         },
       ],
     },
+
+    'cypress-watch-and-reload': {
+      watch: ['app.js', 'index.html'],
+    },
   },
   e2e: {
     // baseUrl, etc
     baseUrl: 'http://localhost:3000',
     fixturesFolder: false,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      // and load any plugins that require the Node environment
+      // https://github.com/bahmutov/cypress-watch-and-reload
+      return require('cypress-watch-and-reload/plugins')(on, config)
     },
   },
 })

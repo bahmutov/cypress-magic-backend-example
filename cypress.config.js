@@ -26,10 +26,20 @@ module.exports = defineConfig({
   },
   e2e: {
     // baseUrl, etc
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://127.0.0.1:3000',
     fixturesFolder: false,
+    env: {
+      // list the files and file patterns to watch
+      'cypress-watch-and-reload': {
+        watch: ['index.html', 'app.js'],
+      },
+    },
     setupNodeEvents(on, config) {
       registerMagicBackend(on, config)
+
+      // https://github.com/bahmutov/cypress-watch-and-reload
+      require('cypress-watch-and-reload/plugins')(on, config)
+
       // IMPORTANT: return the config object
       // because it might be modified by the plugin function
       return config

@@ -85,6 +85,7 @@ function appStart() {
           // do not add empty todos
           return
         }
+
         const todo = {
           title: state.newTodo,
           completed: false,

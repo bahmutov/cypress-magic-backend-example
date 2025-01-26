@@ -5,16 +5,16 @@
   "private": true,
   "scripts": {
     "test": "cypress run",
-    "start": "json-server --static . --watch data.json --middlewares ./slow --middlewares ./node_modules/json-server-reset",
+    "start": "json-server --host 127.0.0.1 --static . --watch data.json --middlewares ./node_modules/json-server-reset",
     "start:static": "serve -p 3000 .",
     "reset": "node reset-db.js",
     "reset:db": "npm run reset",
     "reset:database": "npm run reset",
-    "dev": "start-test start http://localhost:3000 cy:open",
+    "dev": "start-test start http://127.0.0.1:3000 cy:open",
     "cy:open": "cypress open",
-    "record": "CYPRESS_magic_backend_mode=record start-test http://localhost:3000",
-    "play": "CYPRESS_magic_backend_mode=playback start-test http://localhost:3000",
-    "test:no-backend": "CYPRESS_magic_backend_mode=playback start-test start:static http://localhost:3000"
+    "record": "CYPRESS_magic_backend_mode=record start-test http://127.0.0.1:3000",
+    "play": "CYPRESS_magic_backend_mode=playback start-test http://127.0.0.1:3000",
+    "test:no-backend": "CYPRESS_magic_backend_mode=playback start-test start:static http://127.0.0.1:3000"
   },
   "dependencies": {
     "json-server": "0.17.4",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "cypress": "^13.17.0",
     "cypress-magic-backend": "^1.9.0",
+    "cypress-watch-and-reload": "^1.10.17",
     "prettier": "^3.4.2",
     "serve": "^14.2.4",
     "start-server-and-test": "^2.0.9"

@@ -1,6 +1,7 @@
 {
-  "name": "cypress-magic-backend",
-  "version": "1.0.4",
+  "pluginName": "cypress-magic-backend",
+  "pluginVersion": "1.9.0",
+  "specName": "cypress/e2e/delete-todo.cy.js",
   "testName": "adds 2 todo items",
   "apiCallsInThisTest": [
     {
@@ -8,7 +9,7 @@
       "url": "/todos",
       "request": "",
       "response": [],
-      "duration": 1012
+      "duration": 6
     },
     {
       "method": "POST",
@@ -16,14 +17,14 @@
       "request": {
         "title": "item 1",
         "completed": false,
-        "id": "4225153794"
+        "id": "2685978449"
       },
       "response": {
         "title": "item 1",
         "completed": false,
-        "id": "4225153794"
+        "id": "2685978449"
       },
-      "duration": 1014
+      "duration": 8
     },
     {
       "method": "POST",
@@ -31,14 +32,14 @@
       "request": {
         "title": "item 2",
         "completed": false,
-        "id": "4278813554"
+        "id": "9014739878"
       },
       "response": {
         "title": "item 2",
         "completed": false,
-        "id": "4278813554"
+        "id": "9014739878"
       },
-      "duration": 1011
+      "duration": 8
     },
     {
       "method": "GET",
@@ -48,15 +49,15 @@
         {
           "title": "item 1",
           "completed": false,
-          "id": "4225153794"
+          "id": "2685978449"
         },
         {
           "title": "item 2",
           "completed": false,
-          "id": "4278813554"
+          "id": "9014739878"
         }
       ],
-      "duration": 1007
+      "duration": 6
     }
   ]
 }

@@ -4,32 +4,32 @@ const registerMagicBackend = require('cypress-magic-backend/src/plugin')
 
 module.exports = defineConfig({
   defaultBrowser: 'electron',
-  env: {
-    // https://github.com/bahmutov/cypress-magic-backend
-    magicBackend: {
-      // this app makes "XHR" calls to load and update "/todos"
-      // match calls like
-      // GET /todos
-      // POST /todos
-      // DELETE /todos/1234
-      apiCallsToIntercept: [
-        {
-          method: '+(GET|POST)',
-          pathname: '/todos',
-        },
-        {
-          method: 'DELETE',
-          pathname: '/todos/*',
-        },
-      ],
-    },
-  },
   e2e: {
     // baseUrl, etc
     baseUrl: 'http://127.0.0.1:3000',
     fixturesFolder: false,
     env: {
+      // https://github.com/bahmutov/cypress-magic-backend
+      magicBackend: {
+        // this app makes "XHR" calls to load and update "/todos"
+        // match calls like
+        // GET /todos
+        // POST /todos
+        // DELETE /todos/1234
+        apiCallsToIntercept: [
+          {
+            method: '+(GET|POST)',
+            pathname: '/todos',
+          },
+          {
+            method: 'DELETE',
+            pathname: '/todos/*',
+          },
+        ],
+      },
+
       // list the files and file patterns to watch
+      // https://github.com/bahmutov/cypress-watch-and-reload
       'cypress-watch-and-reload': {
         watch: ['index.html', 'app.js'],
       },
@@ -37,7 +37,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       registerMagicBackend(on, config)
 
-      // https://github.com/bahmutov/cypress-watch-and-reload
       require('cypress-watch-and-reload/plugins')(on, config)
 
       // IMPORTANT: return the config object

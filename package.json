@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "cypress run",
-    "start": "json-server --host 127.0.0.1 --static . --watch data.json --middlewares ./node_modules/json-server-reset",
+    "start": "json-server --host 127.0.0.1 --static . --watch data.json --middlewares slow.js --middlewares ./node_modules/json-server-reset",
     "start:static": "serve -p 3000 .",
     "reset": "node reset-db.js",
     "reset:db": "npm run reset",

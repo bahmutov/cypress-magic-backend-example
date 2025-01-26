@@ -1,6 +1,7 @@
 {
-  "name": "cypress-magic-backend",
-  "version": "1.0.4",
+  "pluginName": "cypress-magic-backend",
+  "pluginVersion": "1.9.0",
+  "specName": "cypress/e2e/delete-todo.cy.js",
   "testName": "deletes a todo item",
   "apiCallsInThisTest": [
     {
@@ -11,22 +12,22 @@
         {
           "title": "item 1",
           "completed": false,
-          "id": "4225153794"
+          "id": "2685978449"
         },
         {
           "title": "item 2",
           "completed": false,
-          "id": "4278813554"
+          "id": "9014739878"
         }
       ],
-      "duration": 1019
+      "duration": 6
     },
     {
       "method": "DELETE",
-      "url": "/todos/4278813554",
+      "url": "/todos/9014739878",
       "request": "",
       "response": {},
-      "duration": 1025
+      "duration": 7
     }
   ]
 }

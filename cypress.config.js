@@ -17,14 +17,7 @@ module.exports = defineConfig({
         // POST /todos
         // DELETE /todos/1234
         apiCallsToIntercept: [
-          {
-            method: '+(GET|POST)',
-            pathname: '/todos',
-          },
-          {
-            method: 'DELETE',
-            pathname: '/todos/*',
-          },
+          // TODO: insert the intercept definitions
         ],
       },
 

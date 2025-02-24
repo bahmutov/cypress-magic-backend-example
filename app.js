@@ -86,7 +86,7 @@ function appStart() {
           return
         }
         const todo = {
-          title: state.newTodo,
+          text: state.newTodo,
           completed: false,
           id: randomId(),
         }

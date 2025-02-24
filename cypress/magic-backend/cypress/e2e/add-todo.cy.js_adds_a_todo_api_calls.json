@@ -1,0 +1,63 @@
+{
+  "pluginName": "cypress-magic-backend",
+  "pluginVersion": "1.11.0",
+  "specName": "cypress/e2e/add-todo.cy.js",
+  "testName": "adds a todo",
+  "apiCallsInThisTest": [
+    {
+      "method": "GET",
+      "url": "/todos",
+      "request": "",
+      "response": [],
+      "duration": 1009
+    },
+    {
+      "method": "POST",
+      "url": "/todos",
+      "request": {
+        "title": "item 1",
+        "completed": false,
+        "id": "9245273102"
+      },
+      "response": {
+        "title": "item 1",
+        "completed": false,
+        "id": "9245273102"
+      },
+      "duration": 1007
+    },
+    {
+      "method": "POST",
+      "url": "/todos",
+      "request": {
+        "title": "item 2",
+        "completed": false,
+        "id": "1192682800"
+      },
+      "response": {
+        "title": "item 2",
+        "completed": false,
+        "id": "1192682800"
+      },
+      "duration": 1011
+    },
+    {
+      "method": "GET",
+      "url": "/todos",
+      "request": "",
+      "response": [
+        {
+          "title": "item 1",
+          "completed": false,
+          "id": "9245273102"
+        },
+        {
+          "title": "item 2",
+          "completed": false,
+          "id": "1192682800"
+        }
+      ],
+      "duration": 1010
+    }
+  ]
+}

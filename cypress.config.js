@@ -25,6 +25,7 @@ module.exports = defineConfig({
             method: 'DELETE',
             pathname: '/todos/*',
           },
+          { method: 'POST', pathname: '/reflect' },
         ],
         // where to store recorded API calls?
         // local: store all API calls locally in JSON files

@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "cypress": "^13.17.0",
-    "cypress-magic-backend": "^1.11.0",
+    "cypress-magic-backend": "^1.19.0",
     "cypress-watch-and-reload": "^1.10.17",
     "prettier": "^3.4.2",
     "serve": "^14.2.4",

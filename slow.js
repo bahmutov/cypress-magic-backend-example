@@ -7,11 +7,11 @@ module.exports = function jsonServerReset(req, res, next) {
   // slow down certain api requests by custom timeouts
   const customSlowDowns = [
     // if you want to slow down creating new items
-    // {
-    //   method: 'POST',
-    //   url: '/todos',
-    //   delay: 2000,
-    // },
+    {
+      method: 'POST',
+      url: '/todos',
+      delay: 2000,
+    },
   ]
   const customSlowDown = customSlowDowns.find(
     (item) => item.method === req.method && item.url === req.url,
